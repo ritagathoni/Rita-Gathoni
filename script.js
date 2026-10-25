@@ -29,6 +29,7 @@ if(grid){
   r.name !== 'rita-gathoni-portfolio2' &&
   r.name !== 'Rita-Gathoni' &&
   r.name !== 'ritagathoni' &&
+  r.name !== 'about-me' &&
   !r.name.toLowerCase().includes('portfolio')
 ).slice(0,6);
    if(!selected.length){grid.innerHTML='<p class="muted">Public repositories will appear here as they are updated. <a href="https://github.com/ritagathoni" target="_blank" rel="noopener">View GitHub directly</a>.</p>'; return;}
