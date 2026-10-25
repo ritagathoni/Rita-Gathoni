@@ -1,0 +1,1 @@
+Open index.html. Review all case studies and metrics before deploying. Download the whole ZIP for a GitHub Pages or Netlify upload. This package is not automatically published.
