@@ -88,7 +88,7 @@ small,.micro,.eyebrow,.mono,.kicker,.section-no,.nav-id,.stamp,.meta-chip{font-f
 .map-wrap{position:relative;border:1px solid rgba(255,255,255,.15);background:rgba(255,255,255,.04);height:650px;overflow:hidden;cursor:grab}
 .map-wrap.dragging{cursor:grabbing}
 .map-inner{position:absolute;left:50%;top:50%;width:1400px;height:920px;transform:translate(-50%,-50%)}
-.note-card{position:absolute;display:flex;flex-direction:column;justify-content:space-between;padding:24px;min-height:215px;text-decoration:none;color:var(--ink);background:#fff;border-radius:28px;box-shadow:0 28px 80px rgba(0,0,0,.18);transition:transform .25s ease, box-shadow .25s ease}
+.note-card{position:absolute;display:flex;flex-direction:column;justify-content:space-between;padding:14px;min-height:150px;text-decoration:none;color:var(--ink);background:#fff;border-radius:28px;box-shadow:0 28px 80px rgba(0,0,0,.18);transition:transform .25s ease, box-shadow .25s ease}
 .note-card:hover{transform:translateY(-8px) rotate(0deg) !important;box-shadow:0 30px 90px rgba(0,0,0,.24)}
 .note-card .kicker{font-size:.64rem;color:var(--muted)}
 .note-card strong{font-size:clamp(1.45rem,2.3vw,2.55rem);line-height:1.04;letter-spacing:-.06em}
@@ -237,7 +237,7 @@ h3{font-size:clamp(1.3rem,2.15vw,2.45rem);line-height:1.15;letter-spacing:-.055e
 .callout{margin-top:24px;background:transparent;border-left:none;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink);border-radius:0;padding:24px 0;font-size:.98rem}
 .archive{background:#202128}
 .archive-head h2{max-width:820px;font-size:clamp(2.3rem,4.5vw,5.5rem)}
-.note-card{border-radius:1px;border:6px solid rgba(255,255,255,.55);padding:28px;box-shadow:17px 25px 40px rgba(0,0,0,.27)}
+.note-card{border-radius:1px;border:6px solid rgba(255,255,255,.55);padding:14px;box-shadow:17px 25px 40px rgba(0,0,0,.27)}
 .note-card strong{font-family:var(--font-display);font-size:clamp(1.4rem,2.2vw,2.4rem);font-weight:700;letter-spacing:-.07em}
 .note-card p{font-family:var(--font-editorial);font-style:italic;font-size:1.55rem;line-height:1.16}
 .editorial-break{background:#bd7792;color:#18191b;overflow:hidden;padding:75px 0 85px}
@@ -382,7 +382,7 @@ h2{line-height:1.05;letter-spacing:-.075em}
 .archive-head h2 em,.section-head h2 em,.intro-grid h2 em{font-family:var(--font-display);font-style:normal;font-weight:800;color:#d88ca7;letter-spacing:-.09em}
 .section-head h2 em{color:var(--rose)}
 .map-wrap{border:1px solid #637170;background:#243030}
-.note-card{border-radius:0;box-shadow:18px 18px 0 rgba(0,0,0,.23);padding:28px}
+.note-card{border-radius:0;box-shadow:18px 18px 0 rgba(0,0,0,.23);padding:14px}
 .note-card strong{font-family:var(--font-display);font-weight:800;letter-spacing:-.065em;line-height:.98}
 .note-card p{font-family:var(--font-main);font-size:.94rem;line-height:1.48;font-style:normal;font-weight:500}
 .editorial-interlude{background:#d3aabc;min-height:70vh}
