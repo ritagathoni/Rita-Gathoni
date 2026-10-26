@@ -535,3 +535,64 @@ html{scroll-padding-top:88px}
     bottom: 0;
   }
 }
+
+/* Hero cards: structured, non-overlapping layout */
+
+.hero-collage {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  align-content: end;
+  min-height: 740px;
+  padding-bottom: 16px;
+}
+
+.hero-collage .portrait-frame {
+  bottom: 190px;
+}
+
+.hero-collage .metric-sticker,
+.hero-collage .hero-card {
+  position: relative;
+  inset: auto;
+  left: auto;
+  right: auto;
+  bottom: auto;
+  width: auto;
+  min-width: 0;
+  max-width: none;
+  transform: none;
+  margin: 0;
+  z-index: 4;
+  padding: 20px;
+  align-self: stretch;
+}
+
+.hero-collage .metric-sticker {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.hero-collage .hero-card {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+@media (max-width: 760px) {
+  .hero-collage {
+    grid-template-columns: 1fr;
+    min-height: 760px;
+    gap: 12px;
+  }
+
+  .hero-collage .portrait-frame {
+    bottom: 290px;
+  }
+
+  .hero-collage .metric-sticker,
+  .hero-collage .hero-card {
+    grid-column: 1;
+    grid-row: auto;
+    padding: 16px;
+  }
+}
