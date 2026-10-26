@@ -493,3 +493,45 @@ html{scroll-padding-top:88px}
   color: #666;
   overflow-wrap: anywhere;
 }
+
+/* Homepage collage refinements */
+
+.hero-collage .logo-chip {
+  display: none;
+}
+
+.hero-collage .portrait-note {
+  top: 10px;
+  right: 0;
+  z-index: 3;
+}
+
+.hero-collage .metric-sticker {
+  left: 0;
+  bottom: 28px;
+  z-index: 3;
+  transform: rotate(-3deg);
+}
+
+.hero-collage .hero-card {
+  right: 0;
+  bottom: 26px;
+  z-index: 3;
+  transform: rotate(2deg);
+}
+
+@media (max-width: 760px) {
+  .hero-collage {
+    min-height: 660px;
+  }
+
+  .hero-collage .metric-sticker {
+    left: 0;
+    bottom: 125px;
+  }
+
+  .hero-collage .hero-card {
+    right: 0;
+    bottom: 0;
+  }
+}
