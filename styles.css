@@ -321,7 +321,7 @@ body{background:#f4efe5}
 .featured .content h3{font-size:clamp(2rem,3.4vw,3.9rem);max-width:930px}
 .featured .summary::first-letter{font:italic 400 4.8rem/.7 var(--font-editorial);float:left;margin:9px 10px 0 0;color:#ac4069}
 .featured .tags span{background:transparent;border-color:#bcb4ab}
-.case-figure{height:300px;width:235px;background:#eabecf;transform:rotate(-8deg)}
+.case-figure{height:200px;width:150px;background:#eabecf;transform:rotate(-8deg);transform-origin:center}
 .figure-b{background:#adc7ce;transform:rotate(7deg)}
 .figure-c{background:#bfc9a8;transform:rotate(-6deg)}
 .case-figure b{font-size:8rem;line-height:.86}
