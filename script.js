@@ -24,14 +24,18 @@ if(grid){
  .then(r=>{if(!r.ok) throw new Error('GitHub unavailable'); return r.json()})
  .then(repos=>{
    grid.textContent='';
-   const selected = repos.filter(r =>
-  !r.fork &&
-  r.name !== 'rita-gathoni-portfolio2' &&
-  r.name !== 'Rita-Gathoni' &&
-  r.name !== 'ritagathoni' &&
-  r.name !== 'about-me' &&
-  !r.name.toLowerCase().includes('portfolio')
-).slice(0,6);
+   const featuredProjects = [
+  'prompt-testing-lab',
+  'structured-output-json-qa',
+  'ai-annotation-examples',
+  'kenyan-swahili-ai-evaluation',
+  'business-data-quality-audit'
+];
+
+const selected = featuredProjects
+  .map(name => repos.find(r => r.name === name && !r.fork))
+  .filter(Boolean);
+
    if(!selected.length){grid.innerHTML='<p class="muted">Public repositories will appear here as they are updated. <a href="https://github.com/ritagathoni" target="_blank" rel="noopener">View GitHub directly</a>.</p>'; return;}
    selected.forEach(r=>{
      const card=document.createElement('article'); card.className='repo-card';
