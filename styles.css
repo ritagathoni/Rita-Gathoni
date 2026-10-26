@@ -93,9 +93,9 @@ small,.micro,.eyebrow,.mono,.kicker,.section-no,.nav-id,.stamp,.meta-chip{font-f
 .note-card .kicker{font-size:.64rem;color:var(--muted)}
 .note-card strong{font-size:clamp(1.45rem,2.3vw,2.55rem);line-height:1.04;letter-spacing:-.06em}
 .note-card span:last-child{font-size:.8rem;color:var(--muted);display:flex;justify-content:space-between;align-items:center;border-top:1px solid rgba(0,0,0,.08);padding-top:10px}
-.card-a{left:70px;top:120px;width:350px;background:#f0d3df;transform:rotate(-6deg)}
-.card-b{left:490px;top:70px;width:310px;background:#d4e0e3;transform:rotate(4deg)}
-.card-c{left:920px;top:160px;width:360px;background:#f0e5c2;transform:rotate(-3deg)}
+.card-a{left:70px;top:120px;width:250px;background:#f0d3df;transform:rotate(-6deg)}
+.card-b{left:490px;top:70px;width:230px;background:#d4e0e3;transform:rotate(4deg)}
+.card-c{left:920px;top:160px;width:250px;background:#f0e5c2;transform:rotate(-3deg)}
 .card-d{left:200px;top:450px;width:300px;background:#d7dfd0;transform:rotate(5deg)}
 .card-e{left:590px;top:425px;width:330px;background:#ece5f7;transform:rotate(-5deg)}
 .card-f{left:960px;top:500px;width:295px;background:#f9e3cf;transform:rotate(6deg)}
