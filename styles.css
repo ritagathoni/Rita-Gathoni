@@ -438,3 +438,58 @@ html{scroll-padding-top:88px}
 .story-proof{background:#f1e8e0}
 @media(max-width:850px){.lab-workbench,.education-heading,.education-layout{grid-template-columns:1fr}.lab-sidebar{border-right:0;border-bottom:2px solid var(--ink)}.lab-sidebar{display:flex;gap:8px;overflow-x:auto;align-items:center}.lab-sidebar>span{flex:0 0 100px;margin:0}.lab-tab{flex:0 0 200px;margin:0}.lab-workbench{box-shadow:8px 8px 0 var(--rose-deep)}}
 @media(max-width:580px){.chapter-grid{grid-template-columns:1fr}.chapter-grid>a:nth-child(odd){border-right:0}.chapter-grid>a{min-height:170px}.lab-main{padding:20px}.hero-copy h1{font-size:clamp(2.75rem,11vw,4.4rem)}}
+
+.contact-list {
+  display: grid;
+  gap: 12px;
+}
+
+.contact-list .contact-entry {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 15px 12px;
+  border-bottom: 1px solid #ddd5cb;
+  text-decoration: none;
+  color: inherit;
+  transition: background 0.2s ease;
+}
+
+.contact-entry:hover {
+  background: #f5e9ed;
+}
+
+.contact-symbol {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  border: 1px solid #a34365;
+  border-radius: 50%;
+  color: #a34365;
+  font-size: 23px;
+  font-weight: 700;
+}
+
+.linkedin-symbol {
+  font-family: Arial, sans-serif;
+  font-size: 20px;
+  letter-spacing: -1px;
+}
+
+.contact-entry strong,
+.contact-entry small {
+  display: block;
+}
+
+.contact-entry strong {
+  font-size: 15px;
+  margin-bottom: 3px;
+}
+
+.contact-entry small {
+  font-size: 13px;
+  color: #666;
+  overflow-wrap: anywhere;
+}
