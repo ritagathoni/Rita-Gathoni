@@ -99,3 +99,9 @@ const selected = featuredProjects
  document.querySelectorAll('.lab-tab').forEach(b=>b.addEventListener('click',()=>{document.querySelectorAll('.lab-tab').forEach(x=>{x.classList.remove('active');x.setAttribute('aria-pressed','false')});b.classList.add('active');b.setAttribute('aria-pressed','true');show(b.dataset.lab)}));
  show('factuality');
 })();
+const brandLink = document.querySelector('.brand');
+
+brandLink?.addEventListener('click', (event) => {
+  event.preventDefault();
+  window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+});
