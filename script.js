@@ -105,3 +105,142 @@ brandLink?.addEventListener('click', (event) => {
   event.preventDefault();
   window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
 });
+
+/* SEVEN-SECTION PORTFOLIO LAYOUT
+   Preserves existing content and project links. */
+(() => {
+  const main = document.querySelector('#main');
+  if (!main) return;
+
+  const find = selector => document.querySelector(selector);
+
+  // Seven navigation links. RG remains the Home link.
+  const nav = find('#site-nav');
+  if (nav) {
+    nav.innerHTML = `
+      <a href="#about">About</a>
+      <a href="#featured">Work</a>
+      <a href="#lab">Evaluation Lab</a>
+      <a href="#career">Experience</a>
+      <a href="#founder">ROHENI</a>
+      <a href="#project-library">Project Library</a>
+      <a href="#contact" class="nav-cta">Contact</a>
+    `;
+
+    // Close the mobile navigation after selecting a link.
+    nav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        nav.classList.remove('open');
+        const menu = find('.nav-toggle');
+        if (menu) menu.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+
+  // Keep extra material accessible without displaying
+  // every project section in full.
+  function createPanel(element, label, destination) {
+    if (!element || !destination) return;
+
+    const panel = document.createElement('details');
+    panel.className = 'portfolio-detail-panel';
+
+    const heading = document.createElement('summary');
+    heading.textContent = label;
+
+    panel.appendChild(heading);
+    panel.appendChild(element);
+    destination.appendChild(panel);
+  }
+
+  const about = find('#about');
+  const work = find('#featured');
+  const lab = find('#lab');
+  const career = find('#career');
+  const education = find('#education');
+  const founder = find('#founder');
+  const archive = find('#archive');
+  const github = find('#github');
+  const contact = find('#contact');
+
+  // ABOUT: expertise and achievements.
+  createPanel(
+    find('#practice'),
+    'Explore my expertise and achievements',
+    about?.querySelector('.wrap')
+  );
+
+  // EXPERIENCE: career and academic background.
+  if (career && education) {
+    career.appendChild(education);
+  }
+
+  // WORK: retain all three detailed flagship projects.
+  // Keep the original editorial statements accessible.
+  const notes = document.createElement('div');
+  const breakSection = find('.editorial-break');
+  const interlude = find('.editorial-interlude');
+
+  if (breakSection) notes.appendChild(breakSection);
+  if (interlude) notes.appendChild(interlude);
+
+  if (notes.children.length && work) {
+    createPanel(
+      notes,
+      'Explore my evaluation philosophy',
+      work.querySelector('.wrap')
+    );
+  }
+
+  // PROJECT LIBRARY: interactive archive and extra work.
+  const library = document.createElement('section');
+  library.id = 'project-library';
+
+  if (archive) {
+    const title = archive.querySelector('.archive-head h2');
+    if (title) {
+      title.innerHTML = 'The <em>Project Library.</em>';
+    }
+
+    library.appendChild(archive);
+  }
+
+  const extras = document.createElement('div');
+  extras.className = 'wrap';
+
+  createPanel(
+    find('#work-details'),
+    'Additional professional projects',
+    extras
+  );
+
+  createPanel(
+    find('#project-index'),
+    'Complete case-study index',
+    extras
+  );
+
+  createPanel(
+    github,
+    'GitHub repositories and technical projects',
+    extras
+  );
+
+  library.appendChild(extras);
+
+  // Final homepage ordering.
+  [
+    find('.hero'),
+    find('.ribbon'),
+    about,
+    work,
+    lab,
+    career,
+    founder,
+    library,
+    contact
+  ].forEach(section => {
+    if (section) main.appendChild(section);
+  });
+})();
+
