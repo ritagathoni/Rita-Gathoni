@@ -105,3 +105,32 @@ brandLink?.addEventListener('click', (event) => {
   event.preventDefault();
   window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
 });
+// Portfolio section ordering — preserves all existing content.
+(() => {
+  const main = document.querySelector('#main');
+  if (!main) return;
+
+  const sections = [
+    '.hero',
+    '.ribbon',
+    '#about',
+    '#featured',
+    '.editorial-break',
+    '.editorial-interlude',
+    '#lab',
+    '#practice',
+    '#career',
+    '#education',
+    '#founder',
+    '#archive',
+    '#work-details',
+    '#project-index',
+    '#github',
+    '#contact'
+  ];
+
+  sections.forEach(selector => {
+    const section = main.querySelector(selector);
+    if (section) main.appendChild(section);
+  });
+})();
